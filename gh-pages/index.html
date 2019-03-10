@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+</style>
+<!-- Start : Google Analytics Code -->
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-64069893-2', 'auto');
+  ga('send', 'pageview');
+</script> -->
+<!-- End : Google Analytics Code -->
+<script type="text/javascript" src="resources/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+  <head>
+    <link rel="icon" type="image/png" href="resources/ucsd_logo.png">
+    <title>SIGNet: Semantic Instance Aided Unsupervised 3D Geometry Perception</title>
+    <meta property='og:title' content='SIGNet: Semantic Instance Aided Unsupervised 3D Geometry Perception' />
+    <meta property="og:description" content="Meng, Lu, Raj, Sunarjo, Guo, Javidi, Bansal, Bharadia. SIGNet: Semantic Instance Aided Unsupervised 3D Geometry Perception. In CVPR, 2019." />
+    <meta property='og:url' content='https://mengyuest.github.io/signet/' />
+    <!-- <meta property='og:video' content='https://www.youtube.com/v/J3FHOyhUn3A' />
+    <meta property='og:image' content='https://img.youtube.com/vi/J3FHOyhUn3A/0.jpg' />
+    <meta property="og:type" content="video"> -->
+  </head>
+
+  <body>
+        <br>
+        <center><span style="font-size:40px;font-weight:bold;color:#182B49">SIGNet: Semantic Instance Aided Unsupervised <br/> 3D Geometry Perception</span></center>
+
+        <table align=center width=900px>
+          <tr>
+            <td align=center width=180px>
+            <center><span style="font-size:24px"><a href="https://mengyuest.github.io/" target="_blank">Yue
+            Meng</a></span></center></td>
+            <td align=center width=180px>
+            <center><span style="font-size:24px"><a href="https://sites.google.com/site/luyongxi34/" target="_blank">Yongxi Lu </a></span></center></td>
+            <td align=center width=180px>
+            <center><span style="font-size:24px"><a href="https://amanrajdce.github.io/" target="_blank">Aman Raj</a></span></center></td>
+            <td align=center width=180px>
+            <center><span style="font-size:24px"><a href="https://mengyuest.github.io/signet/" target="_blank">Samuel Sunarjo</a></span></center></td>
+            <td align=center width=180px>
+              <center><span style="font-size:24px"><a href="https://mengyuest.github.io/signet/" target="_blank">Rui
+            Guo</a><sup>&#8224</sup></span></center></td>
+          <tr/>
+         </table>
+
+         <table align=center width=800px>
+            <tr>
+         <td align=center width=150px>
+          <center><span style="font-size:24px"><a href="https://tjavidi.eng.ucsd.edu/" target="_blank">Tara
+        Javidi</a></span></center></td>
+        <td align=center width=150px>
+          <center><span style="font-size:24px"><a href="http://gaurav-bansal.com/" target="_blank">Gaurav
+        Bansal</a><sup>&#8224</sup></span></center></td>
+        <td align=center width=150px>
+          <center><span style="font-size:24px"><a href="https://web.eng.ucsd.edu/~dineshb/" target="_blank">Dinesh
+        Bharadia</a></span></center></td>
+        <tr/>
+      </table>
+
+        <table align=center width=800px>
+          <tr>
+            <td align=center width=400px><center><span style="font-size:24px">University of California, San Diego</span></center></td>
+            <td align=center width=400px><center><span style="font-size:24px">Toyota InfoTechnology Center<sup>&#8224</sup></span></center></td>
+          <tr/>
+        </table>
+        <table align=center width=400px>
+          <tr>
+            <td align=center width=150px>
+            <center><span style="font-size:24px"><a href="http://cvpr2019.thecvf.com/" target="_blank">CVPR 2019</a></span></center></td>
+          <tr/>
+        </table>
+        <!-- <table align=center width=500px>
+          <tr>
+            <td align=center width=200px><center><span style="font-size:24px"><a href="https://arxiv.org/pdf/1812.05642.pdf">[Paper]</a></span></center></td>
+            <td align=center width=200px><center><span style="font-size:24px"><a href='https://github.com/mengyuest/SIGNet'>[Code]</a></span></center></td>
+          <tr/>
+        </table> -->        <table align=center width=900px>
+            <tr><td width=900px>
+              <center><a href="resources/first_one.gif"><img src = "resources/first_one.gif" height="250px"></img></a><br></center>
+            </td></tr>
+          </table>
+
+        <center id="abstract"><h1>Abstract</h1></center>
+        Unsupervised learning for visual perception of 3D geometry is of great interest to autonomous systems. This paper introduces SIGNet, a novel frameworkthat provides robust geometry perception without requiring geometrically informative labels.   Specifically,  SIGNet integrates semantic information to make unsupervised robust geometric predictions for objects in low lighting and noisy environments.  SIGNet is shown to improve upon the state-of-the-art unsupervised learning for geometry perception by 30% (in squared relative error for depth prediction). In addition, SIGNet improves the dynamic object class performance by 39% in depth prediction and 29% in flow prediction.
+
+        <br>
+        <hr>
+
+
+
+        <center id="overview"><h1>Network</h1></center>
+        <table align=center width=1000px>
+            <tr><td width=1000px>
+              <center><a href="resources/network.png"><img src = "resources/network.png" height="250px"></img></a><br></center>
+            </td></tr>
+          </table>
+
+        <br>
+        <hr>
+
+        <center id="results"><h1>Depth Estimation Results on KITTI</h1></center>
+        <table align=center width=1000px>
+            <tr><td width=500px>
+              <center><a href="resources/table.png"><img src = "resources/table.png" height="250px"></img></a><br></center>
+            </td></tr>
+          </table>
+
+        <br>
+        <hr>
+
+        <center id="results"><h1>Robustness & Category-Specific Improvements</h1></center>
+        <table align=center width=1000px>
+            <tr>
+              <td width=500px>
+                <center><a href="resources/lighting.png"><img src = "resources/lighting.png" height="400px"></img></a><br></center>
+              </td> 
+              <td width=500px>
+                <center><a href="resources/dynamic.png"><img src = "resources/dynamic.png" height="250px"></img></a><br></center>
+              </td>
+            </tr>
+          </table>
+
+        <br>
+        <hr>
+
+        <center id="sourceCode"><h1>Paper and Code</h1></center>
+        
+
+        <table align=center width=900px>
+            <tr></tr>
+          <tr>
+            <td >
+        <a href="https://arxiv.org/pdf/1812.05642.pdf"><img class="paperpreview" src="resources/cap.png" width="200px"/></a>
+          </td>
+          <td></td>
+          <td width=700px > <span style="font-size:20px">
+              Yue Meng, Yongxi Lu, Aman Raj, Samuel Sunarjo, Rui Guo, Tara Javidi, Gaurav Bansal, and Dinesh Bharadia. <br/> <a href="https://arxiv.org/pdf/1812.05642.pdf">SIGNet: Semantic Instance Aided Unsupervised 3D Geometry Perception</a> <br/> <i>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2019 <br/>[<a href="https://arxiv.org/pdf/1812.05642.pdf">PDF</a>][<a href="https://github.com/mengyuest/SIGNet">Code</a>] 
+        </td>
+        </tr>
+        
+        </table>
+        </center>
+
+      <br>
+      <hr>
+
+      <br/>
+
+    <br><br>
+<script xml:space="preserve" language="JavaScript">
+hideallbibs();
+</script>
+</body>
+</html>
